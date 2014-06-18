@@ -39,10 +39,11 @@ ApplicationWindow {
 			tab: Rectangle {
 				color: styleData.selected ? "steelblue" :"lightsteelblue"
 				border.color:  "steelblue"
-				width: tabStyle.control.width / tabStyle.control.count //Math.max(text.width + 4, 80)
+				//implicitWidth: Math.max(text.width + 4, 80)
 				implicitHeight: 60
+				implicitWidth: tabStyle.control.width / tabStyle.control.count
 
-				radius: 20
+				radius: 2
 				Text {
 					id: text
 					anchors.centerIn: parent
@@ -53,30 +54,5 @@ ApplicationWindow {
 			frame: Rectangle { color: "red" }
 			leftCorner: Rectangle { color: "cyan" }
 		}
-
-		//		style: TabViewStyle {
-		//			id: tabStyle
-
-		//			frameOverlap: 1
-		//			tab: Rectangle {
-		//				color: styleData.selected ? "steelblue" :"lightsteelblue"
-		//				border.color:  "steelblue"
-		//				border.width: 5
-		//				implicitHeight: 60
-		//				width: tabStyle.control.width / tabStyle.control.count
-
-		//				radius: 2
-		//				Text {
-		//					id: text
-		//					anchors.centerIn: parent
-		//					text: tabStyle.control.width
-		//					color: styleData.selected ? "white" : "black"
-		//				}
-		//			}
-		//			frame: Rectangle { color: "red" }
-		//			tabBar: Rectangle { color: "cyan" }
-		////			tabsAlignment: Qt.AlignHCenter
-		//			leftCorner: Rectangle { color: "cyan" }
-		//		}
 	}
 }
